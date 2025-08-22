@@ -331,6 +331,7 @@ span {
     font-size: 20px;
     font-weight: 600;
     color: var(--text-color);
+    transition: all 0.3s ease;
 }
 .row i {
     display: inline-flex;
@@ -342,6 +343,7 @@ span {
     border-radius: 50%;
     color: var(--text-color);
     background: #075fe4;
+    transition: all 0.3s ease;
 }
 .row h4 {
     font-size: 25px;
@@ -352,13 +354,17 @@ span {
 .row:hover {
     border: 1px solid var(--main-color);
     transform: scale(1.03) translateY(-5px);
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 .portfolio-btn {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
+}
+.main-row h5:hover,
+.row i:hover {
+    color: var(--main-color);
 }
 /* ===================================CONTACT SECTION======================== */
 .contact {
