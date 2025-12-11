@@ -1,6 +1,6 @@
 [build]
-  publish = "dist"
-  command = " " 
+  publish = "."
+  command = "" 
 
 [context.production.environment]
   NODE_ENV = "production"
