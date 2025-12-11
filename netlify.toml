@@ -1,21 +1,12 @@
-# Netlify configuration for a static HTML/CSS/JS portfolio
-
 [build]
-  publish = "."        
-  command = ""        
+  publish = "dist"
+  command = " " 
 
-# Optional: force SPA fallback (not required for your site but safe to keep)
+[context.production.environment]
+  NODE_ENV = "production"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
   force = true
-
-# Optional: enable compression
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Access-Control-Allow-Origin = "*"
-    X-Content-Type-Options = "nosniff"
-    X-Frame-Options = "DENY"
-    Referrer-Policy = "strict-origin-when-cross-origin"
