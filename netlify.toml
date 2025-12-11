@@ -1,12 +1,11 @@
+# Replace netlify.toml with correct safe settings
+cat > netlify.toml <<'EOF'
 [build]
-  publish = "dist"
-  command = " " 
-
-[context.production.environment]
-  NODE_ENV = "production"
-
+  publish = "."
+  command = ""
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
   force = true
+EOF
