@@ -645,10 +645,23 @@ window.addEventListener("load", () => {
     .set("#preloader", { display: "none" });
 });
 
+
+document.addEventListener("DOMContentLoaded", function () {
+    const btn = document.getElementById("resumeBtn");
+    if (btn) {
+        btn.addEventListener("click", function () {
+            gtag("event", "resume_download", {
+                event_category: "engagement",
+                event_label: "Resume Download Click"
+            });
+        });
+    }
+});
+
 document.querySelectorAll(".char").forEach(char => {
   const observer = new MutationObserver(() => {
     char.style.transform = "none";
-  // deletes inline CSS fully
+    // deletes inline CSS fully
   });
 
   observer.observe(char, {
