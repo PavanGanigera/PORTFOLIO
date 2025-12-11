@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Home page -->
+  <url>
+    <loc>https://pavankumar-s.netlify.app/</loc>
+    <lastmod>2025-12-11</lastmod>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- Projects section (same index.html, but indexable anchor) -->
+  <url>
+    <loc>https://pavankumar-s.netlify.app/#projects</loc>
+    <lastmod>2025-12-11</lastmod>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Contact section -->
+  <url>
+    <loc>https://pavankumar-s.netlify.app//#contact</loc>
+    <lastmod>2025-12-11</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+</urlset>
