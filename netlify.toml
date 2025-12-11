@@ -1,11 +1,7 @@
-# Replace netlify.toml with correct safe settings
-cat > netlify.toml <<'EOF'
 [build]
   publish = "."
-  command = ""
+
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
+  from = "/google30d89636389fa4bf.html"
+  to = "/google30d89636389fa4bf.html"
   status = 200
-  force = true
-EOF
