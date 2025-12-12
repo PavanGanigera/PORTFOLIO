@@ -165,7 +165,7 @@ body.light-theme .cursor-glow {
     text-align: center;
 }
 
-.preloader-logo {
+/* .preloader-logo {
     display: inline-flex;
     width: 64px;
     height: 64px;
@@ -179,6 +179,14 @@ body.light-theme .cursor-glow {
     letter-spacing: 0.1em;
     box-shadow: 0 0 40px rgba(56, 189, 248, 0.9);
     margin-bottom: 0.8rem;
+} */
+
+.preloader-logo img {
+  width: 80px !important;     
+  height: auto;
+  object-fit: contain;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 10px rgba(255,255,255,0.4));
 }
 
 .preloader-text {

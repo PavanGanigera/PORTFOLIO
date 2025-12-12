@@ -603,47 +603,125 @@ if (backToTop) {
 }
 
 // ========== PRELOADER ==========
-window.addEventListener("load", () => {
-  const tlPre = gsap.timeline({
-    onComplete: () => {
-      playHeroAnimations();
+
+(function () {
+  // --- CONFIG ---
+  const cycleImages = ["assets/PAVAN.png", "assets/logo.png"];
+  const cycleIntervalMs = 1000;
+
+  // --- STATE ---
+  let imgIndex = 0;
+  let cycleInterval = null;
+
+  // --- FUNCTIONS (defined before use) ---
+  function startLogoCycle() {
+    const img = document.getElementById("preLogo");
+    if (!img) return;
+
+    // clear any previous interval (safety)
+    if (cycleInterval) clearInterval(cycleInterval);
+
+    cycleInterval = setInterval(() => {
+      // use GSAP if available for smooth fades, fallback to simple opacity
+      if (typeof gsap !== "undefined") {
+        gsap.to(img, {
+          opacity: 0,
+          duration: 0.22,
+          onComplete: () => {
+            imgIndex = (imgIndex + 1) % cycleImages.length;
+            img.src = cycleImages[imgIndex];
+            gsap.to(img, { opacity: 1, duration: 0.22 });
+          }
+        });
+      } else {
+        // fallback: simple DOM fade
+        img.style.transition = "opacity 0.22s ease";
+        img.style.opacity = 0;
+        setTimeout(() => {
+          imgIndex = (imgIndex + 1) % cycleImages.length;
+          img.src = cycleImages[imgIndex];
+          img.style.opacity = 1;
+        }, 230);
+      }
+    }, cycleIntervalMs);
+  }
+
+  function stopLogoCycle() {
+    if (cycleInterval) {
+      clearInterval(cycleInterval);
+      cycleInterval = null;
+    }
+  }
+
+  // expose to window in case something calls globally (optional)
+  window.startLogoCycle = startLogoCycle;
+  window.stopLogoCycle = stopLogoCycle;
+
+  // --- PRELOADER + GSAP TIMELINE ---
+  window.addEventListener("load", function () {
+    // Start cycling immediately
+    startLogoCycle();
+
+    // safety: get preloader elements
+    const preLogoImg = document.getElementById("preLogo");
+    const preloaderBar = document.querySelector(".preloader-bar");
+    const preloaderText = document.querySelector(".preloader-text");
+    const preloader = document.getElementById("preloader");
+
+    // If GSAP exists, run timeline; otherwise run a fallback hide
+    if (typeof gsap !== "undefined" && preloader) {
+      const tlPre = gsap.timeline({
+        onComplete: () => {
+          stopLogoCycle();
+          // call your hero animations if defined
+          if (typeof playHeroAnimations === "function") playHeroAnimations();
+        }
+      });
+
+      tlPre
+        .from(preLogoImg, {
+          opacity: 0,
+          scale: 0.4,
+          duration: 0.5,
+          ease: "back.out(1.7)"
+        })
+        .from(
+          preloaderText,
+          {
+            opacity: 0,
+            y: 20,
+            duration: 0.4,
+            ease: "power2.out"
+          },
+          "-=0.2"
+        )
+        .fromTo(
+          preloaderBar,
+          { width: "0%" },
+          {
+            width: "100%",
+            duration: 1.1,
+            ease: "power2.out"
+          }
+        )
+        .to(preloader, {
+          y: "-100%",
+          duration: 0.8,
+          ease: "power3.inOut",
+          delay: 0.1
+        })
+        .set(preloader, { display: "none" });
+    } else {
+      // fallback: stop cycle and hide preloader after short delay
+      setTimeout(() => {
+        stopLogoCycle();
+        if (preloader) preloader.style.display = "none";
+        if (typeof playHeroAnimations === "function") playHeroAnimations();
+      }, 1400);
     }
   });
+})();
 
-  tlPre
-    .from(".preloader-logo", {
-      opacity: 0,
-      scale: 0.4,
-      duration: 0.5,
-      ease: "back.out(1.7)"
-    })
-    .from(
-      ".preloader-text",
-      {
-        opacity: 0,
-        y: 20,
-        duration: 0.4,
-        ease: "power2.out"
-      },
-      "-=0.2"
-    )
-    .fromTo(
-      ".preloader-bar",
-      { width: "0%" },
-      {
-        width: "100%",
-        duration: 1.1,
-        ease: "power2.out"
-      }
-    )
-    .to("#preloader", {
-      y: "-100%",
-      duration: 0.8,
-      ease: "power3.inOut",
-      delay: 0.1
-    })
-    .set("#preloader", { display: "none" });
-});
 
 
 // /assets/js/main.js
@@ -683,4 +761,6 @@ document.querySelectorAll(".char").forEach(char => {
     attributes: true,
     attributeFilter: ["style"]
   });
+  
 });
+
