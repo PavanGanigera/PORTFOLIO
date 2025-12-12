@@ -34,6 +34,11 @@ body.light-theme {
     scroll-behavior: smooth;
 }
 
+/* Commoncss */
+.dj {
+    display: flex;justify-content: center;align-items: center;
+}
+
 /* Custome CSS */
 .sp {
     color: var(--special-color);
@@ -147,25 +152,12 @@ body.light-theme .cursor-glow {
     mix-blend-mode: multiply;
 }
 
-@media (max-width: 767.98px) {
-    .cursor-glow {
-        display: none;
-    }
-}
-
 /* ================= PRELOADER ================= */
 #preloader {
     position: fixed;
     inset: 0;
     background: radial-gradient(circle at top, #1e1b4b 0, #020617 60%);
     z-index: 3000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.preloader-inner {
-    text-align: center;
 }
 
 /* .preloader-logo {
@@ -230,54 +222,6 @@ body.light-theme .cursor-glow {
     transform-origin: left center;
 }
 
-/* ================= SECTION SIDE PROGRESS ================= */
-/* .section-progress {
-    position: fixed;
-    right: 1.4rem;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1200;
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-}
-
-.section-dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 999px;
-    border: 1px solid rgba(148, 163, 184, 0.7);
-    background: rgba(15, 23, 42, 0.7);
-    box-shadow: 0 0 0 transparent;
-    cursor: pointer;
-    padding: 0;
-    outline: none;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-}
-
-.section-dot.active {
-    background: radial-gradient(circle at 30% 0, var(--accent), var(--primary) 70%);
-    border-color: transparent;
-    box-shadow: 0 0 12px rgba(56, 189, 248, 0.9);
-    transform: scale(1.2);
-}
-
-.section-dot:hover {
-    transform: scale(1.15);
-}
-
-@media (max-width: 991.98px) {
-    .section-progress {
-        right: 0.8rem;
-    }
-}
-
-@media (max-width: 767.98px) {
-    .section-progress {
-        display: none;
-    }
-} */
-
 /* ================= SCROLL HUD (BAR + % + BADGE) ================= */
 .scroll-hud {
     position: fixed;
@@ -285,9 +229,6 @@ body.light-theme .cursor-glow {
     top: 50%;
     transform: translateY(-50%);
     z-index: 1199;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     gap: 0.6rem;
     pointer-events: none;
 }
@@ -324,9 +265,6 @@ body.light-theme .cursor-glow {
     width: 46px;
     height: 46px;
     border-radius: 999px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-size: 0.72rem;
     font-weight: 600;
     letter-spacing: 0.08em;
@@ -347,18 +285,6 @@ body.light-theme .scroll-hud-percent {
     text-shadow: 0 0 10px rgba(129, 140, 248, 0.7);
 }
 
-@media (max-width: 991.98px) {
-    .scroll-hud {
-        right: 1rem;
-    }
-}
-
-@media (max-width: 767.98px) {
-    .scroll-hud {
-        display: none;
-    }
-}
-
 /* ================= BACK TO TOP BUTTON ================= */
 #backToTop {
     position: fixed;
@@ -370,9 +296,6 @@ body.light-theme .scroll-hud-percent {
     border: 1px solid rgba(148, 163, 184, 0.75);
     background: radial-gradient(circle at 20% 0, var(--accent), var(--primary) 70%);
     box-shadow: 0 20px 40px rgba(15, 23, 42, 0.95);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     color: #f9fafb;
     cursor: pointer;
     opacity: 0;
@@ -528,8 +451,6 @@ body.light-theme .btn-theme-toggle {
     padding-bottom: 4rem;
     position: relative;
     z-index: 1;
-    display: flex;
-    align-items: center;
     background: radial-gradient(circle at top, #1e293b 0, var(--bg-dark) 45%, #020617 100%);
 }
 
@@ -559,20 +480,12 @@ body.light-theme .hero-section {
 }
 
 .hero-title span.gradient-text {
-    /* Gradient background */
     background: linear-gradient(120deg, var(--accent), #a855f7, #f97316);
-
-    /* Needed for WebKit (Chrome, Safari) */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
-    /* Standard property (kept for completeness) */
     background-clip: text;
     color: transparent;
-
-    /* ensure background is applied to the element area */
     display: inline-block;
-    /* or inline-flex — avoids some paint issues with plain inline */
 }
 
 .word .char {
@@ -586,8 +499,6 @@ body.light-theme .hero-section {
 }
 
 .hero-badges {
-    display: flex;
-    flex-wrap: wrap;
     gap: 0.6rem;
     margin: 1.2rem 0;
 }
@@ -649,8 +560,6 @@ body.light-theme .btn-pill-outline {
 }
 
 .hero-socials {
-    display: flex;
-    align-items: center;
     gap: 0.8rem;
     margin-top: 1.4rem;
 }
@@ -694,9 +603,6 @@ body.light-theme .social-icon {
 }
 
 .hero-card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     margin-bottom: 1.1rem;
 }
 
@@ -916,8 +822,6 @@ body.light-theme .skill-tag {
 }
 
 .skill-meter-label {
-    display: flex;
-    justify-content: space-between;
     font-size: 0.8rem;
     color: var(--muted);
     margin-bottom: 0.25rem;
@@ -1067,8 +971,6 @@ body.light-theme .project-card {
 }
 
 .project-tags {
-    display: flex;
-    flex-wrap: wrap;
     gap: 0.4rem;
     font-size: 0.72rem;
 }
@@ -1153,6 +1055,24 @@ footer a:hover {
 }
 
 /* ================= RESPONSIVE ================= */
+
+@media (max-width: 575.98px) {
+    .hero-title {
+        font-size: 2.3rem;
+    }
+
+    .hero-section {
+        padding-bottom: 3rem;
+    }
+}
+
+/* Tablet Responsive */
+@media (max-width: 991.98px) {
+    .scroll-hud {
+        right: 1rem;
+    }
+}
+
 @media (max-width: 991.98px) {
     .hero-section {
         padding-top: 6.2rem;
@@ -1163,12 +1083,16 @@ footer a:hover {
     }
 }
 
-@media (max-width: 575.98px) {
-    .hero-title {
-        font-size: 2.3rem;
-    }
 
-    .hero-section {
-        padding-bottom: 3rem;
+/* Mobile Ressponsive */
+@media (max-width: 767.98px) {
+    .cursor-glow {
+        display: none;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .scroll-hud {
+        display: none;
     }
 }

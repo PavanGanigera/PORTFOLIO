@@ -69,13 +69,13 @@
   <div class="cursor-glow"></div>
 
   <!-- PRELOADER -->
-  <div id="preloader">
-    <div class="preloader-inner">
+  <div id="preloader" class="dj">
+    <div class="preloader-inner text-center">
       <!-- <div class="preloader-logo">PS</div> -->
-      <div class="preloader-logo d-flex justify-content-center align-items-center">
+      <div class="preloader-logo dj">
         <img id="preLogo" src="/assets/PAVAN.png" alt="Logo" class="preloader-logo-img">
       </div>
-      <div class="preloader-text">CRAFTING INTERFACES...</div>
+      <div class="preloader-text mt-4">CRAFTING INTERFACES...</div>
       <div class="preloader-bar-track">
         <div class="preloader-bar"></div>
       </div>
@@ -88,12 +88,12 @@
 
 
   <!-- SCROLL HUD (BAR + PERCENT + BADGE) -->
-  <div class="scroll-hud">
+  <div class="scroll-hud d-flex flex-column align-items-center">
     <div class="scroll-hud-bar">
       <div class="scroll-hud-bar-fill"></div>
     </div>
     <!-- <div class="scroll-hud-percent">0%</div> -->
-    <div class="scroll-hud-badge">0%</div>
+    <div class="scroll-hud-badge dj">0%</div>
   </div>
 
   <!-- WhatsApp Boat -->
@@ -105,7 +105,7 @@
   </div>
 
   <!-- BACK TO TOP BUTTON -->
-  <button id="backToTop" aria-label="Back to top">
+  <button id="backToTop" class="dj" aria-label="Back to top">
     <i class="fa-solid fa-arrow-up"></i>
   </button>
 
@@ -143,7 +143,7 @@
   </nav>
 
   <!-- HERO -->
-  <header class="hero-section" id="hero">
+  <header class="hero-section d-flex align-items-center" id="hero">
     <div class="container">
       <div class="row align-items-center gy-4">
         <div class="col-lg-7 parallax-block" data-parallax="-20">
@@ -160,7 +160,7 @@
             about animations, clean UI, and smooth user experiences.
           </p>
 
-          <div class="hero-badges hero-anim">
+          <div class="hero-badges hero-anim d-flex flex-wrap">
             <span class="hero-badge-pill">HTML · CSS · JS · Bootstrap</span>
             <span class="hero-badge-pill">WordPress · Tailwind · jQuery</span>
             <span class="hero-badge-pill">Figma · UI/UX</span>
@@ -179,7 +179,7 @@
           </div>
 
 
-          <div class="hero-socials hero-anim">
+          <div class="hero-socials hero-anim d-flex align-items-center ">
             <span class="small text-secondary me-1">Connect:</span>
             <a class="social-icon" href="https://www.linkedin.com/in/pavans143/" target="_blank" aria-label="LinkedIn">
               <i class="fab fa-linkedin-in"></i>
@@ -199,7 +199,7 @@
 
         <div class="col-lg-5 hero-anim parallax-block" data-parallax="25">
           <div class="hero-card tilt">
-            <div class="hero-card-header">
+            <div class="hero-card-header d-flex justify-content-between align-items-center">
               <div>
                 <div class="text-primary small">Currently</div>
                 <div class="fw-semibold">Jr. Web Developer</div>
@@ -330,7 +330,7 @@
         <div class="col-lg-7 reveal-up skills-left">
           <div class="glass-card p-4">
             <div class="skill-meter">
-              <div class="skill-meter-label">
+              <div class="skill-meter-label d-flex justify-content-between">
                 <span>HTML & Semantic Markup</span>
                 <span>98%</span>
               </div>
@@ -340,7 +340,7 @@
             </div>
 
             <div class="skill-meter">
-              <div class="skill-meter-label">
+              <div class="skill-meter-label d-flex justify-content-between">
                 <span>CSS, Flexbox, Grid, Responsive Design</span>
                 <span>98%</span>
               </div>
@@ -350,7 +350,7 @@
             </div>
 
             <div class="skill-meter">
-              <div class="skill-meter-label">
+              <div class="skill-meter-label d-flex justify-content-between">
                 <span>JavaScript & jQuery</span>
                 <span>80%</span>
               </div>
@@ -360,7 +360,7 @@
             </div>
 
             <div class="skill-meter">
-              <div class="skill-meter-label">
+              <div class="skill-meter-label d-flex justify-content-between">
                 <span>Bootstrap & Tailwind CSS</span>
                 <span>85%</span>
               </div>
@@ -370,7 +370,7 @@
             </div>
 
             <div class="skill-meter mb-0">
-              <div class="skill-meter-label">
+              <div class="skill-meter-label d-flex justify-content-between">
                 <span>WordPress, Themes & CMS</span>
                 <span>85%</span>
               </div>
@@ -514,7 +514,7 @@
               UI/UX and WordPress development for a lift manufacturing company, highlighting
               services, projects, and enquiry flows.
             </p>
-            <div class="project-tags">
+            <div class="project-tags d-flex flex-wrap">
               <span class="project-tag">WordPress</span>
               <span class="project-tag">Corporate</span>
               <span class="project-tag">Responsive UI</span>
@@ -536,7 +536,7 @@
               WordPress website for Delmon SAP Services showcasing SAP consulting, tailored solutions,
               industry expertise, and enquiry/contact flows.
             </p>
-            <div class="project-tags">
+            <div class="project-tags d-flex flex-wrap">
               <span class="project-tag">Custom code</span>
               <span class="project-tag">php</span>
               <span class="project-tag">Consulting</span>
@@ -558,7 +558,7 @@
               Corporate site showcasing manpower, equipment rental, and real estate services with
               section-based navigation and CTAs.
             </p>
-            <div class="project-tags">
+            <div class="project-tags d-flex flex-wrap">
               <span class="project-tag">WordPress</span>
               <span class="project-tag">Service Website</span>
               <span class="project-tag">Multi-Section</span>
@@ -581,7 +581,7 @@
               Mining & equipment rental website built using HTML, CSS, and JS with a strong focus on clarity and modern
               structure.
             </p>
-            <div class="project-tags">
+            <div class="project-tags d-flex flex-wrap">
               <span class="project-tag">HTML</span>
               <span class="project-tag">CSS</span>
               <span class="project-tag">JavaScript</span>
@@ -604,7 +604,7 @@
               Facilities management services website with clean service listings, contact flows, and a responsive modern
               professional UI.
             </p>
-            <div class="project-tags">
+            <div class="project-tags d-flex flex-wrap">
               <span class="project-tag">Corporate</span>
               <span class="project-tag">UI/UX</span>
               <span class="project-tag">Responsive</span>
@@ -626,7 +626,7 @@
               Progen Power delivers power solutions, equipment rentals, manpower, and transport services for projects
               across all sectors.
             </p>
-            <div class="project-tags">
+            <div class="project-tags d-flex flex-wrap">
               <span class="project-tag">JavaScript</span>
               <span class="project-tag">Clean Layout</span>
               <span class="project-tag">Web Development</span>
@@ -663,7 +663,7 @@
               Tours & Travels personal project showcasing immersive itineraries, booking flows,
               and responsive UI using HTML/CSS/JS.
             </p>
-            <div class="project-tags">
+            <div class="project-tags d-flex flex-wrap">
               <span class="project-tag">Freelance</span>
               <span class="project-tag">Personal</span>
               <span class="project-tag">Responsive UI</span>
@@ -686,7 +686,7 @@
               A collection of 30 JavaScript projects built in my free time, featuring API
               integration, dynamic UI components, and core frontend logic.
             </p>
-            <div class="project-tags">
+            <div class="project-tags d-flex flex-wrap">
               <span class="project-tag">JavaScript</span>
               <span class="project-tag">API Integration</span>
               <span class="project-tag">DOM Logic</span>
@@ -709,7 +709,7 @@
               A personal project showcasing an event management website with layouts, sections, booking flows, and UI
               using HTML, CSS, and JavaScript.
             </p>
-            <div class="project-tags">
+            <div class="project-tags d-flex flex-wrap">
               <span class="project-tag">HTML</span>
               <span class="project-tag">CSS</span>
               <span class="project-tag">JavaScript</span>
@@ -742,7 +742,7 @@
               </div>
             </div>
             <div class="col-6">
-              <div class="hero-socials hero-anim mt-0">
+              <div class="hero-socials hero-anim mt-0 d-flex align-items-center">
                 <!-- <span class="small text-secondary me-1">Connect:</span> -->
                 <a class="social-icon" href="https://www.linkedin.com/in/pavans143/" target="_blank"
                   aria-label="LinkedIn">
