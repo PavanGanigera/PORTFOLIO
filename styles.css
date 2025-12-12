@@ -216,7 +216,7 @@ body.light-theme .cursor-glow {
 /* ================= SCROLL HUD (BAR + % + BADGE) ================= */
 .scroll-hud {
     position: fixed;
-    right: 3.3rem;
+    right: 2rem;
     top: 50%;
     transform: translateY(-50%);
     z-index: 1199;
@@ -284,7 +284,7 @@ body.light-theme .scroll-hud-percent {
 
 @media (max-width: 991.98px) {
     .scroll-hud {
-        right: 2.4rem;
+        right: 1rem;
     }
 }
 
