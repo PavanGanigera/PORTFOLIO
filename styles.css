@@ -34,11 +34,65 @@ body.light-theme {
     scroll-behavior: smooth;
 }
 
-/* DICEDED */
+/* Custome CSS */
 .sp {
     color: var(--special-color);
 }
 
+.gty-wacb-wrapper {
+    position: fixed;
+    bottom: 23px;
+    right: 84px;
+    display: inline-flex;
+    align-items: center;
+    z-index: 9999;
+    transform: scale(1);
+    transform-origin: right bottom;
+}
+
+/* Button */
+.gty-wacb-button {
+    background-color: #29a71a;
+    text-decoration: none;
+    border-radius: 23px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+}
+
+/* Icon */
+.gty-wacb-button-logo {
+    margin-right: 8px;
+    width: 30px;
+    height: 30px;
+}
+
+/* Text */
+.gty-wacb-button-text {
+    font-size: 16px;
+    color: #ffffff;
+}
+/* 🔥 Infinite Animation */
+.animate-wapp {
+    animation: pulseGlow 1.5s infinite ease-in-out;
+}
+
+@keyframes pulseGlow {
+    0% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 0px #25D366);
+    }
+    50% {
+        transform: scale(1.22);
+        filter: drop-shadow(0 0 10px #25D366) drop-shadow(0 0 25px #25D366);
+    }
+    100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 0px #25D366);
+    }
+}
 
 body {
     margin: 0;
