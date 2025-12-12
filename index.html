@@ -610,24 +610,37 @@
             Whether you’re looking for a Web Developer, need help with a website, or just want
             to talk about UI and animations—feel free to reach out.
           </p>
-          <div class="hero-socials hero-anim">
-            <span class="small text-secondary me-1">Connect:</span>
-            <a class="social-icon" href="https://www.linkedin.com/in/pavans143/" target="_blank" aria-label="LinkedIn">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a class="social-icon" href="https://github.com/PavanGanigera" target="_blank" aria-label="GitHub">
-              <i class="fab fa-github"></i>
-            </a>
-            <a class="social-icon" href="mailto:pavanganigera27753@gmail.com" aria-label="Email">
-              <i class="fa-solid fa-envelope"></i>
-            </a>
-            <a class="social-icon" href="https://www.instagram.com/anantapur_abbai_44/" target="_blank"
-              aria-label="Instagram">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
+          <div class="row my-4">
+            <div class="col-6">
+              <div>
+                <a id="resumeBtn" href="/assets/PavanKumar_S.pdf" download target="_blank" class="btn btn-pill-outline">
+                  View Resume
+                  <i class="fa-solid fa-up-right-from-square"></i>
+                </a>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="hero-socials hero-anim mt-0">
+                <!-- <span class="small text-secondary me-1">Connect:</span> -->
+                <a class="social-icon" href="https://www.linkedin.com/in/pavans143/" target="_blank"
+                  aria-label="LinkedIn">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a class="social-icon" href="https://github.com/PavanGanigera" target="_blank" aria-label="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a class="social-icon" href="mailto:pavanganigera27753@gmail.com" aria-label="Email">
+                  <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a class="social-icon" href="https://www.instagram.com/anantapur_abbai_44/" target="_blank"
+                  aria-label="Instagram">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </div>
+            </div>
           </div>
 
-          <div class="glass-card p-4 mt-3 contact-info-card">
+          <div class="glass-card p-4 mt-4 contact-info-card">
             <div class="d-flex justify-content-between">
               <p class="small text-uppercase text-primary mb-2">Direct Contact</p>
               <span class="status-pill">
@@ -665,7 +678,13 @@
                     required />
                 </div>
 
-                <div class="col-12">
+                <div class="col-6">
+                  <label for="phone" class="form-label">Phone Number</label>
+                  <input name="phone" type="tel" id="phone" class="form-control"
+                    placeholder="Project, collaboration, or enquiry" required />
+                </div>
+
+                <div class="col-6">
                   <label for="subject" class="form-label">Subject</label>
                   <input name="subject" type="text" id="subject" class="form-control"
                     placeholder="Project, collaboration, or enquiry" required />
@@ -677,16 +696,17 @@
                     placeholder="Tell me a bit about what you need…" required></textarea>
                 </div>
 
-                <div class="col-12">
+                <div class="col-12 col-md-4">
                   <button type="submit" class="btn btn-pill-primary">
                     Send Message
                     <i class="fa-solid fa-paper-plane"></i>
                   </button>
+                </div>
+                <div class="col-12 col-md-8">
                   <p class="small text-secondary mt-2 mb-0">
-                    (Form demo only – connect via email or LinkedIn for a real project.)
+                    Kindly use the form below to contact me regarding suitable openings.
                   </p>
                 </div>
-
               </div>
             </form>
 
