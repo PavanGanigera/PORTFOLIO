@@ -646,16 +646,31 @@ window.addEventListener("load", () => {
 });
 
 
+// /assets/js/main.js
 document.addEventListener("DOMContentLoaded", function () {
-    const btn = document.getElementById("resumeBtn");
-    if (btn) {
-        btn.addEventListener("click", function () {
-            gtag("event", "resume_download", {
-                event_category: "engagement",
-                event_label: "Resume Download Click"
-            });
+  const btn = document.getElementById("resumeBtn");
+  if (!btn) return;
+
+  btn.addEventListener("click", function () {
+    try {
+      if (typeof gtag === "function") {
+        gtag("event", "resume_download", {
+          event_category: "engagement",
+          event_label: "Resume Download Click"
         });
+      } else {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: "resume_download",
+          event_category: "engagement",
+          event_label: "Resume Download Click"
+        });
+      }
+    } catch (e) {
+      // don't break the site if analytics throws an error
+      console.warn("GA event error:", e);
     }
+  });
 });
 
 document.querySelectorAll(".char").forEach(char => {
