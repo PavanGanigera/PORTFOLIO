@@ -17,6 +17,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="robots" content="index,follow" />
   <meta name="author" content="Pavan Kumar S" />
+  <meta name="theme-color" content="#0d6efd" />
 
 
   <!-- Open Graph (Facebook, LinkedIn, etc.) -->
@@ -37,27 +38,24 @@
   <meta name="twitter:image" content="https://pavankumar-s.netlify.app/assets/og-image.jpg" />
 
   <!-- Bootstrap 5 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" media="print"
+    onload="this.media='all'" />
 
   <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
     rel="stylesheet" />
 
   <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print"
+    onload="this.media='all'" />
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="styles.css" />
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-99DFNGDZJ0"></script>
-  <!-- <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-99DFNGDZJ0');
-  </script> -->
+  <link rel="preload" href="styles.css" as="style" onload="this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="styles.css">
+  </noscript>
 
 </head>
 
@@ -73,7 +71,8 @@
     <div class="preloader-inner text-center">
       <!-- <div class="preloader-logo">PS</div> -->
       <div class="preloader-logo dj">
-        <img id="preLogo" src="/assets/PAVAN.png" alt="Logo" class="preloader-logo-img">
+        <img id="preLogo" src="/assets/PAVAN.webp" alt="Pavan Kumar Front End Developer" class="preloader-logo-img"
+          loading="lazy" fetchpriority="high" />
       </div>
       <div class="preloader-text mt-4">CRAFTING INTERFACES...</div>
       <div class="preloader-bar-track">
@@ -99,7 +98,7 @@
   <!-- WhatsApp Boat -->
   <div class="gty-wacb-wrapper">
     <a href="https://wa.me/+9121445315" class="gty-wacb-button" target="_blank">
-      <img src="/assets/whatsapp.png" class="gty-wacb-button-logo animate-wapp" alt="WhatsApp Logo">
+      <img src="/assets/whatsapp.png" class="gty-wacb-button-logo animate-wapp" alt="WhatsApp Logo" loading="lazy">
       <div class="gty-wacb-button-text">Chat</div>
     </a>
   </div>
@@ -142,701 +141,735 @@
     </div>
   </nav>
 
-  <!-- HERO -->
-  <header class="hero-section d-flex align-items-center" id="hero">
-    <div class="container">
-      <div class="row align-items-center gy-4">
-        <div class="col-lg-7 parallax-block" data-parallax="-20">
-          <div class="mb-3 hero-tag hero-anim">
-            <i class="fa-solid fa-code"></i>
-            <span>Web Developer · UI-Focused</span>
-          </div>
-          <h1 class="hero-title mt-2 mb-3 hero-anim split-heading">
-            Hi, I'm <span class="gradient-text">Pavan Kumar&nbsp;S</span>
-          </h1>
-          <p class="hero-subtitle hero-anim">
-            Web Developer with 1.6 year of experience building responsive, user-friendly
-            interfaces using HTML, CSS, JavaScript, Bootstrap, Tailwind, and WordPress. Passionate
-            about animations, clean UI, and smooth user experiences.
-          </p>
+  <main id="main-content">
 
-          <div class="hero-badges hero-anim d-flex flex-wrap">
-            <span class="hero-badge-pill">HTML · CSS · JS · Bootstrap</span>
-            <span class="hero-badge-pill">WordPress · Tailwind · jQuery</span>
-            <span class="hero-badge-pill">Figma · UI/UX</span>
-          </div>
+    <!-- HERO -->
+    <header class="hero-section d-flex align-items-center" id="hero">
+      <div class="container">
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-7 parallax-block" data-parallax="-20">
+            <div class="mb-3 hero-tag hero-anim">
+              <i class="fa-solid fa-code"></i>
+              <span>Web Developer · UI-Focused</span>
+            </div>
+            <h1 class="hero-title mt-2 mb-3 hero-anim split-heading">
+              Hi, I'm <span class="gradient-text">Pavan Kumar&nbsp;S</span>
+            </h1>
+            <p class="hero-subtitle hero-anim">
+              Web Developer with 1.6 year of experience building responsive, user-friendly
+              interfaces using HTML, CSS, JavaScript, Bootstrap, Tailwind, and WordPress. Passionate
+              about animations, clean UI, and smooth user experiences.
+            </p>
 
-          <div class="d-flex flex-wrap gap-2 mt-2 hero-anim">
-            <a href="#projects" class="btn btn-pill-primary">
-              View Projects
-              <i class="fa-solid fa-arrow-right-long"></i>
-            </a>
-            <!-- i want btn for donwload resume -->
-            <a id="resumeBtn" href="/assets/PavanKumar_S.pdf" download target="_blank" class="btn btn-pill-outline">
-              View Resume
-              <i class="fa-solid fa-up-right-from-square"></i>
-            </a>
-          </div>
-
-
-          <div class="hero-socials hero-anim d-flex align-items-center ">
-            <span class="small text-secondary me-1">Connect:</span>
-            <a class="social-icon" href="https://www.linkedin.com/in/pavans143/" target="_blank" aria-label="LinkedIn">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a class="social-icon" href="https://github.com/PavanGanigera" target="_blank" aria-label="GitHub">
-              <i class="fab fa-github"></i>
-            </a>
-            <a class="social-icon" href="mailto:pavanganigera27753@gmail.com" aria-label="Email">
-              <i class="fa-solid fa-envelope"></i>
-            </a>
-            <a class="social-icon" href="https://www.instagram.com/anantapur_abbai_44/" target="_blank"
-              aria-label="Instagram">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-          </div>
-        </div>
-
-        <div class="col-lg-5 hero-anim parallax-block" data-parallax="25">
-          <div class="hero-card tilt">
-            <div class="hero-card-header d-flex justify-content-between align-items-center">
-              <div>
-                <div class="text-primary small">Currently</div>
-                <div class="fw-semibold">Jr. Web Developer</div>
-                <div class="small text-secondary">Seldom Technologies Pvt. Ltd.</div>
-              </div>
-              <span class="status-pill">
-                <i class="fa-solid fa-circle-dot me-1"></i>Open to Opportunities
-              </span>
+            <div class="hero-badges hero-anim d-flex flex-wrap">
+              <span class="hero-badge-pill">HTML · CSS · JS · Bootstrap</span>
+              <span class="hero-badge-pill">WordPress · Tailwind · jQuery</span>
+              <span class="hero-badge-pill">Figma · UI/UX</span>
             </div>
 
-            <div class="hero-meta-row">
-              <div>
-                <div class="hero-meta-label">Location</div>
-                <div class="hero-meta-value">Bangalore, India</div>
-              </div>
-              <div>
-                <div class="hero-meta-label">Experience</div>
-                <div class="hero-meta-value">1.6 Years</div>
-              </div>
-              <div>
-                <div class="hero-meta-label">Primary Stack</div>
-                <div class="hero-meta-value">HTML · CSS · JS · WP</div>
-              </div>
-              <div>
-                <div class="hero-meta-label">Contact</div>
-                <div class="hero-meta-value">+91 9121445315</div>
-              </div>
+            <div class="d-flex flex-wrap gap-2 mt-2 hero-anim">
+              <a href="#projects" class="btn btn-pill-primary">
+                View Projects
+                <i class="fa-solid fa-arrow-right-long"></i>
+              </a>
+              <!-- i want btn for donwload resume -->
+              <a id="resumeBtn" href="/assets/PavanKumar_S.pdf" download target="_blank" class="btn btn-pill-outline">
+                View Resume
+                <i class="fa-solid fa-up-right-from-square"></i>
+              </a>
             </div>
 
-            <div class="tech-chip-row">
-              <span class="tech-chip">Responsive UI</span>
-              <span class="tech-chip">WordPress Plugin</span>
-              <span class="tech-chip">SEO-Friendly</span>
-              <span class="tech-chip">Animations</span>
-              <span class="tech-chip">Performance</span>
-              <span class="tech-chip">Next.js</span>
-              <span class="tech-chip">Php(Basic's)</span>
-              <span class="tech-chip">Python</span>
-              <span class="tech-chip">Kali Linux</span>
-            </div>
 
-            <div class="result-row">
-              Impact: Improved customer satisfaction by
-              <span class="bold">30%</span> and reduced complaints by
-              <span class="bold">20%</span> through better UI and optimized web experiences.
+            <div class="hero-socials hero-anim d-flex align-items-center ">
+              <span class="small text-secondary me-1">Connect:</span>
+              <a class="social-icon" href="https://www.linkedin.com/in/pavans143/" target="_blank"
+                aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a class="social-icon" href="https://github.com/PavanGanigera" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              <a class="social-icon" href="mailto:pavanganigera27753@gmail.com" aria-label="Email">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+              <a class="social-icon" href="https://www.instagram.com/anantapur_abbai_44/" target="_blank"
+                aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
             </div>
+          </div>
 
-            <div class="floating-blob blob-1"></div>
-            <div class="floating-blob blob-2"></div>
+          <div class="col-lg-5 hero-anim parallax-block" data-parallax="25">
+            <div class="hero-card tilt">
+              <div class="hero-card-header d-flex justify-content-between align-items-center">
+                <div>
+                  <div class="text-primary small">Currently</div>
+                  <div class="fw-semibold">Jr. Web Developer</div>
+                  <div class="small text-secondary">Seldom Technologies Pvt. Ltd.</div>
+                </div>
+                <span class="status-pill">
+                  <i class="fa-solid fa-circle-dot me-1"></i>Open to Opportunities
+                </span>
+              </div>
+
+              <div class="hero-meta-row">
+                <div>
+                  <div class="hero-meta-label">Location</div>
+                  <div class="hero-meta-value">Bangalore, India</div>
+                </div>
+                <div>
+                  <div class="hero-meta-label">Experience</div>
+                  <div class="hero-meta-value">1.6 Years</div>
+                </div>
+                <div>
+                  <div class="hero-meta-label">Primary Stack</div>
+                  <div class="hero-meta-value">HTML · CSS · JS · WP</div>
+                </div>
+                <div>
+                  <div class="hero-meta-label">Contact</div>
+                  <div class="hero-meta-value">+91 9121445315</div>
+                </div>
+              </div>
+
+              <div class="tech-chip-row">
+                <span class="tech-chip">Responsive UI</span>
+                <span class="tech-chip">WordPress Plugin</span>
+                <span class="tech-chip">SEO-Friendly</span>
+                <span class="tech-chip">Animations</span>
+                <span class="tech-chip">Performance</span>
+                <span class="tech-chip">Next.js</span>
+                <span class="tech-chip">Php(Basic's)</span>
+                <span class="tech-chip">Python</span>
+                <span class="tech-chip">Kali Linux</span>
+              </div>
+
+              <div class="result-row">
+                Impact: Improved customer satisfaction by
+                <span class="bold">30%</span> and reduced complaints by
+                <span class="bold">20%</span> through better UI and optimized web experiences.
+              </div>
+
+              <div class="floating-blob blob-1"></div>
+              <div class="floating-blob blob-2"></div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="container parallax-block" data-parallax="-15">
-      <div class="row g-4 align-items-center">
-        <div class="col-lg-6 reveal-up about-left">
-          <div class="section-label">About</div>
-          <h2 class="section-title">Turning designs into delightful web experiences.</h2>
-          <p class="lead">
-            I’m a Web Developer focused on creating responsive, accessible, and visually
-            engaging interfaces. I work primarily with HTML, CSS, JavaScript, Bootstrap, Tailwind
-            CSS, and WordPress to build scalable, optimized web applications and marketing sites.
-          </p>
-          <p class="lead mb-0">
-            I enjoy taking a design from Figma or a rough idea and transforming it into a polished
-            live experience with smooth interactions, clean animations, and good performance.
-          </p>
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container parallax-block" data-parallax="-15">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-6 reveal-up about-left">
+            <div class="section-label">About</div>
+            <h2 class="section-title">Turning designs into delightful web experiences.</h2>
+            <p class="lead">
+              I’m a Web Developer focused on creating responsive, accessible, and visually
+              engaging interfaces. I work primarily with HTML, CSS, JavaScript, Bootstrap, Tailwind
+              CSS, and WordPress to build scalable, optimized web applications and marketing sites.
+            </p>
+            <p class="lead mb-0">
+              I enjoy taking a design from Figma or a rough idea and transforming it into a polished
+              live experience with smooth interactions, clean animations, and good performance.
+            </p>
 
-          <div class="about-pill">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Comfortable with E-commerce, Corporate, NGO & Service websites</span>
+            <div class="about-pill">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Comfortable with E-commerce, Corporate, NGO & Service websites</span>
+            </div>
+          </div>
+
+          <div class="col-lg-6 reveal-up about-right">
+            <div class="glass-card p-4">
+              <h6 class="text-uppercase text-secondary small mb-3">Quick Highlights</h6>
+              <div class="row gy-3">
+                <div class="col-sm-6">
+                  <div class="small text-secondary text-uppercase mb-1">Web Technologies</div>
+                  <div class="fw-medium">HTML, CSS, JS, Bootstrap, Tailwind, WordPress</div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="small text-secondary text-uppercase mb-1">UI/UX & Tools</div>
+                  <div class="fw-medium">Figma, jQuery, React, Next.js</div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="small text-secondary text-uppercase mb-1">Databases & Version Control</div>
+                  <div class="fw-medium">MySQL · Git · GitHub</div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="small text-secondary text-uppercase mb-1">Education</div>
+                  <div class="fw-medium">MBA in Information Technology (JNTU Anantapur)</div>
+                </div>
+              </div>
+
+              <hr class="border-secondary my-3" />
+
+              <p class="small text-secondary mb-1">Some things I enjoy beyond work:</p>
+              <p class="mb-0 small">
+                Gaming · Browsing · Playing Volleyball · Learning New Technologies
+              </p>
+            </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="col-lg-6 reveal-up about-right">
-          <div class="glass-card p-4">
-            <h6 class="text-uppercase text-secondary small mb-3">Quick Highlights</h6>
-            <div class="row gy-3">
-              <div class="col-sm-6">
-                <div class="small text-secondary text-uppercase mb-1">Web Technologies</div>
-                <div class="fw-medium">HTML, CSS, JS, Bootstrap, Tailwind, WordPress</div>
-              </div>
-              <div class="col-sm-6">
-                <div class="small text-secondary text-uppercase mb-1">UI/UX & Tools</div>
-                <div class="fw-medium">Figma, jQuery, React, Next.js</div>
-              </div>
-              <div class="col-sm-6">
-                <div class="small text-secondary text-uppercase mb-1">Databases & Version Control</div>
-                <div class="fw-medium">MySQL · Git · GitHub</div>
-              </div>
-              <div class="col-sm-6">
-                <div class="small text-secondary text-uppercase mb-1">Education</div>
-                <div class="fw-medium">MBA in Information Technology (JNTU Anantapur)</div>
-              </div>
-            </div>
-
-            <hr class="border-secondary my-3" />
-
-            <p class="small text-secondary mb-1">Some things I enjoy beyond work:</p>
-            <p class="mb-0 small">
-              Gaming · Browsing · Playing Volleyball · Learning New Technologies
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="container parallax-block" data-parallax="18">
+        <div class="row mb-4">
+          <div class="col-lg-7 reveal-up">
+            <div class="section-label">Skills</div>
+            <h2 class="section-title">Tech stack & strengths.</h2>
+            <p class="section-caption">
+              From HTML structure to CSS styling, animations, and WordPress development—here’s what I
+              use to bring layouts to life.
             </p>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- SKILLS -->
-  <section id="skills">
-    <div class="container parallax-block" data-parallax="18">
-      <div class="row mb-4">
-        <div class="col-lg-7 reveal-up">
-          <div class="section-label">Skills</div>
-          <h2 class="section-title">Tech stack & strengths.</h2>
-          <p class="section-caption">
-            From HTML structure to CSS styling, animations, and WordPress development—here’s what I
-            use to bring layouts to life.
-          </p>
-        </div>
-      </div>
+        <div class="row g-4">
+          <div class="col-lg-7 reveal-up skills-left">
+            <div class="glass-card p-4">
+              <div class="skill-meter">
+                <div class="skill-meter-label d-flex justify-content-between">
+                  <span>HTML & Semantic Markup</span>
+                  <span>98%</span>
+                </div>
+                <div class="skill-progress-track">
+                  <div class="skill-progress-fill" data-skill="98"></div>
+                </div>
+              </div>
 
-      <div class="row g-4">
-        <div class="col-lg-7 reveal-up skills-left">
-          <div class="glass-card p-4">
-            <div class="skill-meter">
-              <div class="skill-meter-label d-flex justify-content-between">
-                <span>HTML & Semantic Markup</span>
-                <span>98%</span>
+              <div class="skill-meter">
+                <div class="skill-meter-label d-flex justify-content-between">
+                  <span>CSS, Flexbox, Grid, Responsive Design</span>
+                  <span>98%</span>
+                </div>
+                <div class="skill-progress-track">
+                  <div class="skill-progress-fill" data-skill="98"></div>
+                </div>
               </div>
-              <div class="skill-progress-track">
-                <div class="skill-progress-fill" data-skill="98"></div>
-              </div>
-            </div>
 
-            <div class="skill-meter">
-              <div class="skill-meter-label d-flex justify-content-between">
-                <span>CSS, Flexbox, Grid, Responsive Design</span>
-                <span>98%</span>
+              <div class="skill-meter">
+                <div class="skill-meter-label d-flex justify-content-between">
+                  <span>JavaScript & jQuery</span>
+                  <span>80%</span>
+                </div>
+                <div class="skill-progress-track">
+                  <div class="skill-progress-fill" data-skill="80"></div>
+                </div>
               </div>
-              <div class="skill-progress-track">
-                <div class="skill-progress-fill" data-skill="98"></div>
-              </div>
-            </div>
 
-            <div class="skill-meter">
-              <div class="skill-meter-label d-flex justify-content-between">
-                <span>JavaScript & jQuery</span>
-                <span>80%</span>
+              <div class="skill-meter">
+                <div class="skill-meter-label d-flex justify-content-between">
+                  <span>Bootstrap & Tailwind CSS</span>
+                  <span>85%</span>
+                </div>
+                <div class="skill-progress-track">
+                  <div class="skill-progress-fill" data-skill="85"></div>
+                </div>
               </div>
-              <div class="skill-progress-track">
-                <div class="skill-progress-fill" data-skill="80"></div>
-              </div>
-            </div>
 
-            <div class="skill-meter">
-              <div class="skill-meter-label d-flex justify-content-between">
-                <span>Bootstrap & Tailwind CSS</span>
-                <span>85%</span>
-              </div>
-              <div class="skill-progress-track">
-                <div class="skill-progress-fill" data-skill="85"></div>
-              </div>
-            </div>
-
-            <div class="skill-meter mb-0">
-              <div class="skill-meter-label d-flex justify-content-between">
-                <span>WordPress, Themes & CMS</span>
-                <span>85%</span>
-              </div>
-              <div class="skill-progress-track">
-                <div class="skill-progress-fill" data-skill="85"></div>
+              <div class="skill-meter mb-0">
+                <div class="skill-meter-label d-flex justify-content-between">
+                  <span>WordPress, Themes & CMS</span>
+                  <span>85%</span>
+                </div>
+                <div class="skill-progress-track">
+                  <div class="skill-progress-fill" data-skill="85"></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="col-lg-5 reveal-up skills-right">
-          <div class="glass-card p-4 h-100">
-            <p class="small text-uppercase text-white mb-3">Familiar Tools & Libraries</p>
-            <div class="d-flex flex-wrap">
-              <span class="skill-tag">
-                <i class="fa-solid fa-bolt"></i> GSAP (animations)
-              </span>
-              <span class="skill-tag">
-                <i class="fa-solid fa-layer-group"></i> React · Next.js (basics)
-              </span>
-              <span class="skill-tag">
-                <i class="fa-solid fa-pen-ruler"></i> Figma (UI/UX)
-              </span>
-              <span class="skill-tag">
-                <i class="fa-solid fa-database"></i> MySQL
-              </span>
-              <span class="skill-tag">
-                <i class="fa-solid fa-code-branch"></i> Git & GitHub
-              </span>
-              <span class="skill-tag">
-                <i class="fa-solid fa-chart-line"></i> SEO-friendly Markup
-              </span>
-              <span class="skill-tag">
-                <i class="fa-brands fa-php"></i> PHP (basics)
-              </span>
+          <div class="col-lg-5 reveal-up skills-right">
+            <div class="glass-card p-4 h-100">
+              <p class="small text-uppercase text-white mb-3">Familiar Tools & Libraries</p>
+              <div class="d-flex flex-wrap">
+                <span class="skill-tag">
+                  <i class="fa-solid fa-bolt"></i> GSAP (animations)
+                </span>
+                <span class="skill-tag">
+                  <i class="fa-solid fa-layer-group"></i> React · Next.js (basics)
+                </span>
+                <span class="skill-tag">
+                  <i class="fa-solid fa-pen-ruler"></i> Figma (UI/UX)
+                </span>
+                <span class="skill-tag">
+                  <i class="fa-solid fa-database"></i> MySQL
+                </span>
+                <span class="skill-tag">
+                  <i class="fa-solid fa-code-branch"></i> Git & GitHub
+                </span>
+                <span class="skill-tag">
+                  <i class="fa-solid fa-chart-line"></i> SEO-friendly Markup
+                </span>
+                <span class="skill-tag">
+                  <i class="fa-brands fa-php"></i> PHP (basics)
+                </span>
+              </div>
+
+              <p class="small text-secondary mt-3 mb-0">
+                I focus on writing clean, maintainable code with attention to details like typography,
+                spacing, interaction states, and performance.
+              </p>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <p class="small text-secondary mt-3 mb-0">
-              I focus on writing clean, maintainable code with attention to details like typography,
-              spacing, interaction states, and performance.
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="container parallax-block" data-parallax="-20">
+        <div class="row mb-4">
+          <div class="col-lg-7 reveal-up">
+            <div class="section-label">Experience</div>
+            <h2 class="section-title">Professional journey so far.</h2>
+            <p class="section-caption">
+              Working with real-world clients across E-commerce, Equipment Rental, Manpower Supply,
+              NGO, and Service sectors has helped me understand both UI and business needs.
             </p>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- EXPERIENCE -->
-  <section id="experience">
-    <div class="container parallax-block" data-parallax="-20">
-      <div class="row mb-4">
-        <div class="col-lg-7 reveal-up">
-          <div class="section-label">Experience</div>
-          <h2 class="section-title">Professional journey so far.</h2>
-          <p class="section-caption">
-            Working with real-world clients across E-commerce, Equipment Rental, Manpower Supply,
-            NGO, and Service sectors has helped me understand both UI and business needs.
-          </p>
-        </div>
-      </div>
+        <div class="row g-4">
+          <div class="col-lg-8 reveal-up experience-left">
+            <div class="timeline">
+              <div class="timeline-progress"></div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-role">Jr. Web Developer</div>
+                <div class="timeline-company">Seldom Technologies Pvt. Ltd. · Mangalagiri, AP</div>
+                <div class="timeline-meta">April 2024 – Present</div>
+                <ul class="timeline-list">
+                  <li>
+                    Developed and maintained responsive web applications using HTML, CSS, JavaScript,
+                    and jQuery.
+                  </li>
+                  <li>
+                    Designed and customized WordPress themes based on client requirements with SEO
+                    best practices.
+                  </li>
+                  <li>
+                    Integrated Tailwind CSS & Bootstrap to build clean and modern user interfaces.
+                  </li>
+                  <li>
+                    Collaborated with cross-functional teams to enhance UX and optimize performance.
+                  </li>
+                  <li>
+                    Contributed to a 30% increase in positive feedback and 20% reduction in
+                    complaints by improving site usability.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
 
-      <div class="row g-4">
-        <div class="col-lg-8 reveal-up experience-left">
-          <div class="timeline">
-            <div class="timeline-progress"></div>
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-role">Jr. Web Developer</div>
-              <div class="timeline-company">Seldom Technologies Pvt. Ltd. · Mangalagiri, AP</div>
-              <div class="timeline-meta">April 2024 – Present</div>
-              <ul class="timeline-list">
-                <li>
-                  Developed and maintained responsive web applications using HTML, CSS, JavaScript,
-                  and jQuery.
-                </li>
-                <li>
-                  Designed and customized WordPress themes based on client requirements with SEO
-                  best practices.
-                </li>
-                <li>
-                  Integrated Tailwind CSS & Bootstrap to build clean and modern user interfaces.
-                </li>
-                <li>
-                  Collaborated with cross-functional teams to enhance UX and optimize performance.
-                </li>
-                <li>
-                  Contributed to a 30% increase in positive feedback and 20% reduction in
-                  complaints by improving site usability.
-                </li>
+          <div class="col-lg-4 reveal-up experience-right">
+            <div class="glass-card p-4 h-100">
+              <p class="small text-uppercase text-white mb-3">Industries Worked With</p>
+              <ul class="small text-secondary mb-3 ps-3">
+                <li>E-commerce & Online Stores</li>
+                <li>Equipment Rental & Industrial</li>
+                <li>Manpower & Workforce Solutions</li>
+                <li>NGO & Foundation Websites</li>
+                <li>Corporate & Service Sector Sites</li>
               </ul>
+              <p class="small mb-0">
+                I often work end-to-end: from layout structure and CMS configuration, to frontend
+                styling, animations, and final delivery.
+              </p>
             </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="col-lg-4 reveal-up experience-right">
-          <div class="glass-card p-4 h-100">
-            <p class="small text-uppercase text-white mb-3">Industries Worked With</p>
-            <ul class="small text-secondary mb-3 ps-3">
-              <li>E-commerce & Online Stores</li>
-              <li>Equipment Rental & Industrial</li>
-              <li>Manpower & Workforce Solutions</li>
-              <li>NGO & Foundation Websites</li>
-              <li>Corporate & Service Sector Sites</li>
-            </ul>
-            <p class="small mb-0">
-              I often work end-to-end: from layout structure and CMS configuration, to frontend
-              styling, animations, and final delivery.
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="container parallax-block" data-parallax="22">
+        <div class="row mb-4">
+          <div class="col-lg-7 reveal-up">
+            <div class="section-label">Projects</div>
+            <h2 class="section-title">Some work I’ve been part of.</h2>
+            <p class="section-caption">
+              Here are a few representative projects across different industries. Many were built with
+              HTML, CSS, JS, and WordPress, with a focus on responsive layouts and clean UI.
             </p>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- PROJECTS -->
-  <section id="projects">
-    <div class="container parallax-block" data-parallax="22">
-      <div class="row mb-4">
-        <div class="col-lg-7 reveal-up">
-          <div class="section-label">Projects</div>
-          <h2 class="section-title">Some work I’ve been part of.</h2>
-          <p class="section-caption">
-            Here are a few representative projects across different industries. Many were built with
-            HTML, CSS, JS, and WordPress, with a focus on responsive layouts and clean UI.
-          </p>
-        </div>
-      </div>
-
-      <div class="row g-4 projects-grid">
-        <!-- Project 1 -->
-        <div class="col-md-6 col-lg-4 reveal-up">
-          <article class="project-card parallax-block tilt" data-parallax="-12">
-            <div class="d-flex justify-content-between">
-              <div class="project-badge">Corporate · WordPress</div>
-              <a id="resumeBtn" href="https://rainbowlifts.com/" target="_blank" class=" badge badge-pill bg-info"> view
-                <i class="fa-solid fa-up-right-from-square ms-2"></i>
-              </a>
-            </div>
-            <h3 class="project-title">Rainbow Lifts</h3>
-            <p class="project-desc">
-              UI/UX and WordPress development for a lift manufacturing company, highlighting
-              services, projects, and enquiry flows.
-            </p>
-            <div class="project-tags d-flex flex-wrap">
-              <span class="project-tag">WordPress</span>
-              <span class="project-tag">Corporate</span>
-              <span class="project-tag">Responsive UI</span>
-            </div>
-          </article>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="col-md-6 col-lg-4 reveal-up">
-          <article class="project-card parallax-block tilt" data-parallax="-6">
-            <div class="d-flex justify-content-between">
-              <div class="project-badge">SAP · Services</div>
-              <a id="resumeBtn" href="https://delmonsap.com/" target="_blank" class=" badge badge-pill bg-info"> view
-                <i class="fa-solid fa-up-right-from-square ms-2"></i>
-              </a>
-            </div>
-            <h3 class="project-title"> Delmon SAP Services</h3>
-            <p class="project-desc">
-              WordPress website for Delmon SAP Services showcasing SAP consulting, tailored solutions,
-              industry expertise, and enquiry/contact flows.
-            </p>
-            <div class="project-tags d-flex flex-wrap">
-              <span class="project-tag">Custom code</span>
-              <span class="project-tag">php</span>
-              <span class="project-tag">Consulting</span>
-            </div>
-          </article>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="col-md-6 col-lg-4 reveal-up">
-          <article class="project-card parallax-block tilt" data-parallax="0">
-            <div class="d-flex justify-content-between">
-              <div class="project-badge">Corporate · Services</div>
-              <a id="resumeBtn" href="https://tenvidh.com/" target="_blank" class=" badge badge-pill bg-info"> view
-                <i class="fa-solid fa-up-right-from-square ms-2"></i>
-              </a>
-            </div>
-            <h3 class="project-title">TenVidh</h3>
-            <p class="project-desc">
-              Corporate site showcasing manpower, equipment rental, and real estate services with
-              section-based navigation and CTAs.
-            </p>
-            <div class="project-tags d-flex flex-wrap">
-              <span class="project-tag">WordPress</span>
-              <span class="project-tag">Service Website</span>
-              <span class="project-tag">Multi-Section</span>
-            </div>
-          </article>
-        </div>
-
-        <!-- Project 4 -->
-        <div class="col-md-6 col-lg-4 reveal-up">
-          <article class="project-card parallax-block tilt" data-parallax="6">
-            <div class="d-flex justify-content-between">
-              <div class="project-badge">Industrial · HTML/CSS/JS</div>
-              <a id="resumeBtn" href="https://www.varasidhi.com/" target="_blank" class=" badge badge-pill bg-info">
-                view
-                <i class="fa-solid fa-up-right-from-square ms-2"></i>
-              </a>
-            </div>
-            <h3 class="project-title">Varasidhi Equipment Rental</h3>
-            <p class="project-desc">
-              Mining & equipment rental website built using HTML, CSS, and JS with a strong focus on clarity and modern
-              structure.
-            </p>
-            <div class="project-tags d-flex flex-wrap">
-              <span class="project-tag">HTML</span>
-              <span class="project-tag">CSS</span>
-              <span class="project-tag">JavaScript</span>
-            </div>
-          </article>
-        </div>
-
-        <!-- Project 5 -->
-        <div class="col-md-6 col-lg-4 reveal-up">
-          <article class="project-card parallax-block tilt" data-parallax="10">
-            <div class="d-flex justify-content-between">
-              <div class="project-badge">Facilities · Services</div>
-              <a id="resumeBtn" href="https://modonalarabia.com/" target="_blank" class=" badge badge-pill bg-info">
-                view
-                <i class="fa-solid fa-up-right-from-square ms-2"></i>
-              </a>
-            </div>
-            <h3 class="project-title">Modon Al Arabia</h3>
-            <p class="project-desc">
-              Facilities management services website with clean service listings, contact flows, and a responsive modern
-              professional UI.
-            </p>
-            <div class="project-tags d-flex flex-wrap">
-              <span class="project-tag">Corporate</span>
-              <span class="project-tag">UI/UX</span>
-              <span class="project-tag">Responsive</span>
-            </div>
-          </article>
-        </div>
-
-        <!-- Project 6 -->
-        <div class="col-md-6 col-lg-4 reveal-up">
-          <article class="project-card parallax-block tilt" data-parallax="14">
-            <div class="d-flex justify-content-between">
-              <div class="project-badge">Power · Rental</div>
-              <a id="resumeBtn" href="https://progenrental.com/" target="_blank" class=" badge badge-pill bg-info"> view
-                <i class="fa-solid fa-up-right-from-square ms-2"></i>
-              </a>
-            </div>
-            <h3 class="project-title">Progen Power</h3>
-            <p class="project-desc">
-              Progen Power delivers power solutions, equipment rentals, manpower, and transport services for projects
-              across all sectors.
-            </p>
-            <div class="project-tags d-flex flex-wrap">
-              <span class="project-tag">JavaScript</span>
-              <span class="project-tag">Clean Layout</span>
-              <span class="project-tag">Web Development</span>
-            </div>
-          </article>
-        </div>
-      </div>
-
-      <!-- Personal projects -->
-      <div class="row mb-4 mt-5">
-        <div class="col-lg-7 reveal-up">
-          <div class="section-label">Personal Projects</div>
-          <h2 class="section-title">Work I’ve independently designed and developed</h2>
-          <p class="section-caption">
-            These projects demonstrate my ability to take an idea from concept to execution, using HTML, CSS,
-            JavaScript, and modern UI practices to deliver polished, responsive results.
-          </p>
-        </div>
-      </div>
-
-      <div class="row g-4 projects-grid">
-        <!-- Project 1 -->
-        <div class="col-md-6 col-lg-4 reveal-up">
-          <article class="project-card parallax-block tilt" data-parallax="-12">
-            <div class="d-flex justify-content-between">
-              <div class="project-badge">Travel · Leisure</div>
-              <a id="resumeBtn" href="https://tours-and-travells.netlify.app/" target="_blank"
-                class=" badge badge-pill bg-info"> view
-                <i class="fa-solid fa-up-right-from-square ms-2"></i>
-              </a>
-            </div>
-            <h3 class="project-title">Tours & Travels</h3>
-            <p class="project-desc">
-              Tours & Travels personal project showcasing immersive itineraries, booking flows,
-              and responsive UI using HTML/CSS/JS.
-            </p>
-            <div class="project-tags d-flex flex-wrap">
-              <span class="project-tag">Freelance</span>
-              <span class="project-tag">Personal</span>
-              <span class="project-tag">Responsive UI</span>
-            </div>
-          </article>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="col-md-6 col-lg-4 reveal-up">
-          <article class="project-card parallax-block tilt" data-parallax="-12">
-            <div class="d-flex justify-content-between">
-              <div class="project-badge">JavaScript · APIs</div>
-              <a id="resumeBtn" href="https://30mini-js.netlify.app/" target="_blank" class=" badge badge-pill bg-info">
-                view
-                <i class="fa-solid fa-up-right-from-square ms-2"></i>
-              </a>
-            </div>
-            <h3 class="project-title">30 JavaScript Projects</h3>
-            <p class="project-desc">
-              A collection of 30 JavaScript projects built in my free time, featuring API
-              integration, dynamic UI components, and core frontend logic.
-            </p>
-            <div class="project-tags d-flex flex-wrap">
-              <span class="project-tag">JavaScript</span>
-              <span class="project-tag">API Integration</span>
-              <span class="project-tag">DOM Logic</span>
-            </div>
-          </article>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="col-md-6 col-lg-4 reveal-up">
-          <article class="project-card parallax-block tilt" data-parallax="-12">
-            <div class="d-flex justify-content-between">
-              <div class="project-badge">Events · Services</div>
-              <a id="resumeBtn" href="https://event-managers.netlify.app/" target="_blank"
-                class=" badge badge-pill bg-info"> view
-                <i class="fa-solid fa-up-right-from-square ms-2"></i>
-              </a>
-            </div>
-            <h3 class="project-title">Event Management</h3>
-            <p class="project-desc">
-              A personal project showcasing an event management website with layouts, sections, booking flows, and UI
-              using HTML, CSS, and JavaScript.
-            </p>
-            <div class="project-tags d-flex flex-wrap">
-              <span class="project-tag">HTML</span>
-              <span class="project-tag">CSS</span>
-              <span class="project-tag">JavaScript</span>
-            </div>
-          </article>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="container parallax-block" data-parallax="-18">
-      <div class="row g-4">
-        <div class="col-lg-5 reveal-up contact-left">
-          <div class="section-label">Contact</div>
-          <h2 class="section-title">Let’s build something together.</h2>
-          <p class="section-caption">
-            Whether you’re looking for a Web Developer, need help with a website, or just want
-            to talk about UI and animations—feel free to reach out.
-          </p>
-          <div class="row my-4">
-            <div class="col-6">
-              <div>
-                <a id="resumeBtn" href="/assets/PavanKumar_S.pdf" download target="_blank" class="btn btn-pill-outline">
-                  View Resume
-                  <i class="fa-solid fa-up-right-from-square"></i>
+        <div class="row g-4 projects-grid">
+          <!-- Project 1 -->
+          <div class="col-md-6 col-lg-4 reveal-up">
+            <article class="project-card parallax-block tilt" data-parallax="-12">
+              <div class="d-flex justify-content-between">
+                <div class="project-badge">Corporate · WordPress</div>
+                <a id="resumeBtn" href="https://rainbowlifts.com/" target="_blank" class=" badge badge-pill bg-info">
+                  view
+                  <i class="fa-solid fa-up-right-from-square ms-2"></i>
                 </a>
               </div>
-            </div>
-            <div class="col-6">
-              <div class="hero-socials hero-anim mt-0 d-flex align-items-center">
-                <!-- <span class="small text-secondary me-1">Connect:</span> -->
-                <a class="social-icon" href="https://www.linkedin.com/in/pavans143/" target="_blank"
-                  aria-label="LinkedIn">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a class="social-icon" href="https://github.com/PavanGanigera" target="_blank" aria-label="GitHub">
-                  <i class="fab fa-github"></i>
-                </a>
-                <a class="social-icon" href="mailto:pavanganigera27753@gmail.com" aria-label="Email">
-                  <i class="fa-solid fa-envelope"></i>
-                </a>
-                <a class="social-icon" href="https://www.instagram.com/anantapur_abbai_44/" target="_blank"
-                  aria-label="Instagram">
-                  <i class="fa-brands fa-instagram"></i>
-                </a>
+              <h3 class="project-title">Rainbow Lifts</h3>
+              <p class="project-desc">
+                UI/UX and WordPress development for a lift manufacturing company, highlighting
+                services, projects, and enquiry flows.
+              </p>
+              <div class="project-tags d-flex flex-wrap">
+                <span class="project-tag">WordPress</span>
+                <span class="project-tag">Corporate</span>
+                <span class="project-tag">Responsive UI</span>
               </div>
-            </div>
+            </article>
           </div>
 
-          <div class="glass-card p-4 mt-4 contact-info-card">
-            <div class="d-flex justify-content-between">
-              <p class="small text-uppercase text-primary mb-2">Direct Contact</p>
-              <span class="status-pill">
-                <i class="fa-solid fa-circle-dot me-1"></i>Open to Opportunities
-              </span>
-            </div>
-            <p class="mb-1 small">
-              <i class="fa-solid fa-phone me-2 contact-icon"></i> +91 9121445315
-            </p>
-            <p class="mb-1 small">
-              <i class="fa-solid fa-envelope me-2 contact-icon"></i>
-              <a href="mailto:pavanganigera27753@gmail.com" class="text-decoration-none text-white">
-                pavanganigera27753@gmail.com
-              </a>
-            </p>
-            <p class="mb-0 small">
-              <i class="fa-solid fa-location-dot me-2 contact-icon"></i> Bangalore, India
+          <!-- Project 2 -->
+          <div class="col-md-6 col-lg-4 reveal-up">
+            <article class="project-card parallax-block tilt" data-parallax="-6">
+              <div class="d-flex justify-content-between">
+                <div class="project-badge">SAP · Services</div>
+                <a id="resumeBtn" href="https://delmonsap.com/" target="_blank" class=" badge badge-pill bg-info"> view
+                  <i class="fa-solid fa-up-right-from-square ms-2"></i>
+                </a>
+              </div>
+              <h3 class="project-title"> Delmon SAP Services</h3>
+              <p class="project-desc">
+                WordPress website for Delmon SAP Services showcasing SAP consulting, tailored solutions,
+                industry expertise, and enquiry/contact flows.
+              </p>
+              <div class="project-tags d-flex flex-wrap">
+                <span class="project-tag">Custom code</span>
+                <span class="project-tag">php</span>
+                <span class="project-tag">Consulting</span>
+              </div>
+            </article>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="col-md-6 col-lg-4 reveal-up">
+            <article class="project-card parallax-block tilt" data-parallax="0">
+              <div class="d-flex justify-content-between">
+                <div class="project-badge">Corporate · Services</div>
+                <a id="resumeBtn" href="https://tenvidh.com/" target="_blank" class=" badge badge-pill bg-info"> view
+                  <i class="fa-solid fa-up-right-from-square ms-2"></i>
+                </a>
+              </div>
+              <h3 class="project-title">TenVidh</h3>
+              <p class="project-desc">
+                Corporate site showcasing manpower, equipment rental, and real estate services with
+                section-based navigation and CTAs.
+              </p>
+              <div class="project-tags d-flex flex-wrap">
+                <span class="project-tag">WordPress</span>
+                <span class="project-tag">Service Website</span>
+                <span class="project-tag">Multi-Section</span>
+              </div>
+            </article>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="col-md-6 col-lg-4 reveal-up">
+            <article class="project-card parallax-block tilt" data-parallax="6">
+              <div class="d-flex justify-content-between">
+                <div class="project-badge">Industrial · HTML/CSS/JS</div>
+                <a id="resumeBtn" href="https://www.varasidhi.com/" target="_blank" class=" badge badge-pill bg-info">
+                  view
+                  <i class="fa-solid fa-up-right-from-square ms-2"></i>
+                </a>
+              </div>
+              <h3 class="project-title">Varasidhi Equipment Rental</h3>
+              <p class="project-desc">
+                Mining & equipment rental website built using HTML, CSS, and JS with a strong focus on clarity and
+                modern
+                structure.
+              </p>
+              <div class="project-tags d-flex flex-wrap">
+                <span class="project-tag">HTML</span>
+                <span class="project-tag">CSS</span>
+                <span class="project-tag">JavaScript</span>
+              </div>
+            </article>
+          </div>
+
+          <!-- Project 5 -->
+          <div class="col-md-6 col-lg-4 reveal-up">
+            <article class="project-card parallax-block tilt" data-parallax="10">
+              <div class="d-flex justify-content-between">
+                <div class="project-badge">Facilities · Services</div>
+                <a id="resumeBtn" href="https://modonalarabia.com/" target="_blank" class=" badge badge-pill bg-info">
+                  view
+                  <i class="fa-solid fa-up-right-from-square ms-2"></i>
+                </a>
+              </div>
+              <h3 class="project-title">Modon Al Arabia</h3>
+              <p class="project-desc">
+                Facilities management services website with clean service listings, contact flows, and a responsive
+                modern
+                professional UI.
+              </p>
+              <div class="project-tags d-flex flex-wrap">
+                <span class="project-tag">Corporate</span>
+                <span class="project-tag">UI/UX</span>
+                <span class="project-tag">Responsive</span>
+              </div>
+            </article>
+          </div>
+
+          <!-- Project 6 -->
+          <div class="col-md-6 col-lg-4 reveal-up">
+            <article class="project-card parallax-block tilt" data-parallax="14">
+              <div class="d-flex justify-content-between">
+                <div class="project-badge">Power · Rental</div>
+                <a id="resumeBtn" href="https://progenrental.com/" target="_blank" class=" badge badge-pill bg-info">
+                  view
+                  <i class="fa-solid fa-up-right-from-square ms-2"></i>
+                </a>
+              </div>
+              <h3 class="project-title">Progen Power</h3>
+              <p class="project-desc">
+                Progen Power delivers power solutions, equipment rentals, manpower, and transport services for projects
+                across all sectors.
+              </p>
+              <div class="project-tags d-flex flex-wrap">
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">Clean Layout</span>
+                <span class="project-tag">Web Development</span>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Personal projects -->
+        <div class="row mb-4 mt-5">
+          <div class="col-lg-7 reveal-up">
+            <div class="section-label">Personal Projects</div>
+            <h2 class="section-title">Work I’ve independently designed and developed</h2>
+            <p class="section-caption">
+              These projects demonstrate my ability to take an idea from concept to execution, using HTML, CSS,
+              JavaScript, and modern UI practices to deliver polished, responsive results.
             </p>
           </div>
         </div>
 
-        <div class="col-lg-7 reveal-up contact-right">
-          <div class="glass-card p-4 contact-form-card">
-            <form action="https://formspree.io/f/mrbnkyng" method="POST" class="contact-form">
-              <div class="row g-3">
+        <div class="row g-4 projects-grid">
+          <!-- Project 1 -->
+          <div class="col-md-6 col-lg-4 reveal-up">
+            <article class="project-card parallax-block tilt" data-parallax="-12">
+              <div class="d-flex justify-content-between">
+                <div class="project-badge">Travel · Leisure</div>
+                <a id="resumeBtn" href="https://tours-and-travells.netlify.app/" target="_blank"
+                  class=" badge badge-pill bg-info"> view
+                  <i class="fa-solid fa-up-right-from-square ms-2"></i>
+                </a>
+              </div>
+              <h3 class="project-title">Tours & Travels</h3>
+              <p class="project-desc">
+                Tours & Travels personal project showcasing immersive itineraries, booking flows,
+                and responsive UI using HTML/CSS/JS.
+              </p>
+              <div class="project-tags d-flex flex-wrap">
+                <span class="project-tag">Freelance</span>
+                <span class="project-tag">Personal</span>
+                <span class="project-tag">Responsive UI</span>
+              </div>
+            </article>
+          </div>
 
-                <div class="col-md-6">
-                  <label for="name" class="form-label">Name</label>
-                  <input name="name" type="text" id="name" class="form-control" placeholder="Your name" required />
-                </div>
+          <!-- Project 2 -->
+          <div class="col-md-6 col-lg-4 reveal-up">
+            <article class="project-card parallax-block tilt" data-parallax="-12">
+              <div class="d-flex justify-content-between">
+                <div class="project-badge">JavaScript · APIs</div>
+                <a id="resumeBtn" href="https://30mini-js.netlify.app/" target="_blank"
+                  class=" badge badge-pill bg-info">
+                  view
+                  <i class="fa-solid fa-up-right-from-square ms-2"></i>
+                </a>
+              </div>
+              <h3 class="project-title">30 JavaScript Projects</h3>
+              <p class="project-desc">
+                A collection of 30 JavaScript projects built in my free time, featuring API
+                integration, dynamic UI components, and core frontend logic.
+              </p>
+              <div class="project-tags d-flex flex-wrap">
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">API Integration</span>
+                <span class="project-tag">DOM Logic</span>
+              </div>
+            </article>
+          </div>
 
-                <div class="col-md-6">
-                  <label for="email" class="form-label">Email</label>
-                  <input name="email" type="email" id="email" class="form-control" placeholder="you@example.com"
-                    required />
-                </div>
+          <!-- Project 3 -->
+          <div class="col-md-6 col-lg-4 reveal-up">
+            <article class="project-card parallax-block tilt" data-parallax="-12">
+              <div class="d-flex justify-content-between">
+                <div class="project-badge">Events · Services</div>
+                <a id="resumeBtn" href="https://event-managers.netlify.app/" target="_blank"
+                  class=" badge badge-pill bg-info"> view
+                  <i class="fa-solid fa-up-right-from-square ms-2"></i>
+                </a>
+              </div>
+              <h3 class="project-title">Event Management</h3>
+              <p class="project-desc">
+                A personal project showcasing an event management website with layouts, sections, booking flows, and UI
+                using HTML, CSS, and JavaScript.
+              </p>
+              <div class="project-tags d-flex flex-wrap">
+                <span class="project-tag">HTML</span>
+                <span class="project-tag">CSS</span>
+                <span class="project-tag">JavaScript</span>
+              </div>
+            </article>
+          </div>
 
-                <div class="col-6">
-                  <label for="phone" class="form-label">Phone Number</label>
-                  <input name="phone" type="tel" id="phone" class="form-control"
-                    placeholder="Project, collaboration, or enquiry" required />
-                </div>
+          <!-- Project 4 -->
+          <div class="col-md-6 col-lg-4 reveal-up">
+            <article class="project-card parallax-block tilt" data-parallax="-12">
+              <div class="d-flex justify-content-between">
+                <div class="project-badge">Events · Services</div>
+                <a id="resumeBtn" href="https://event-managers.netlify.app/" target="_blank"
+                  class=" badge badge-pill bg-info"> view
+                  <i class="fa-solid fa-up-right-from-square ms-2"></i>
+                </a>
+              </div>
+              <h3 class="project-title">Event Management</h3>
+              <p class="project-desc">
+                A personal project showcasing an event management website with layouts, sections, booking flows, and UI
+                using HTML, CSS, and JavaScript.
+              </p>
+              <div class="project-tags d-flex flex-wrap">
+                <span class="project-tag">HTML</span>
+                <span class="project-tag">CSS</span>
+                <span class="project-tag">JavaScript</span>
+              </div>
+            </article>
+          </div>
 
-                <div class="col-6">
-                  <label for="subject" class="form-label">Subject</label>
-                  <input name="subject" type="text" id="subject" class="form-control"
-                    placeholder="Project, collaboration, or enquiry" required />
-                </div>
+        </div>
+      </div>
+    </section>
 
-                <div class="col-12">
-                  <label for="message" class="form-label">Message</label>
-                  <textarea name="message" id="message" class="form-control"
-                    placeholder="Tell me a bit about what you need…" required></textarea>
-                </div>
-
-                <div class="col-12 col-md-4">
-                  <button type="submit" class="btn btn-pill-primary">
-                    Send Message
-                    <i class="fa-solid fa-paper-plane"></i>
-                  </button>
-                </div>
-                <div class="col-12 col-md-8">
-                  <p class="small text-secondary mt-2 mb-0">
-                    Kindly use the form below to contact me regarding suitable openings.
-                  </p>
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container parallax-block" data-parallax="-18">
+        <div class="row g-4">
+          <div class="col-lg-5 reveal-up contact-left">
+            <div class="section-label">Contact</div>
+            <h2 class="section-title">Let’s build something together.</h2>
+            <p class="section-caption">
+              Whether you’re looking for a Web Developer, need help with a website, or just want
+              to talk about UI and animations—feel free to reach out.
+            </p>
+            <div class="row my-4">
+              <div class="col-6">
+                <div>
+                  <a id="resumeBtn" href="/assets/PavanKumar_S.pdf" download target="_blank"
+                    class="btn btn-pill-outline">
+                    View Resume
+                    <i class="fa-solid fa-up-right-from-square"></i>
+                  </a>
                 </div>
               </div>
-            </form>
+              <div class="col-6">
+                <div class="hero-socials hero-anim mt-0 d-flex align-items-center">
+                  <!-- <span class="small text-secondary me-1">Connect:</span> -->
+                  <a class="social-icon" href="https://www.linkedin.com/in/pavans143/" target="_blank"
+                    aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                  <a class="social-icon" href="https://github.com/PavanGanigera" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a class="social-icon" href="mailto:pavanganigera27753@gmail.com" aria-label="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                  </a>
+                  <a class="social-icon" href="https://www.instagram.com/anantapur_abbai_44/" target="_blank"
+                    aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
 
+            <div class="glass-card p-4 mt-4 contact-info-card">
+              <div class="d-flex justify-content-between">
+                <p class="small text-uppercase text-primary mb-2">Direct Contact</p>
+                <span class="status-pill">
+                  <i class="fa-solid fa-circle-dot me-1"></i>Open to Opportunities
+                </span>
+              </div>
+              <p class="mb-1 small">
+                <i class="fa-solid fa-phone me-2 contact-icon"></i> +91 9121445315
+              </p>
+              <p class="mb-1 small">
+                <i class="fa-solid fa-envelope me-2 contact-icon"></i>
+                <a href="mailto:pavanganigera27753@gmail.com" class="text-decoration-none text-white">
+                  pavanganigera27753@gmail.com
+                </a>
+              </p>
+              <p class="mb-0 small">
+                <i class="fa-solid fa-location-dot me-2 contact-icon"></i> Bangalore, India
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-7 reveal-up contact-right">
+            <div class="glass-card p-4 contact-form-card">
+              <form action="https://formspree.io/f/mrbnkyng" method="POST" class="contact-form">
+                <div class="row g-3">
+
+                  <div class="col-md-6">
+                    <label for="name" class="form-label">Name</label>
+                    <input name="name" type="text" id="name" class="form-control" placeholder="Your name" required />
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="email" class="form-label">Email</label>
+                    <input name="email" type="email" id="email" class="form-control" placeholder="you@example.com"
+                      required />
+                  </div>
+
+                  <div class="col-6">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input name="phone" type="tel" id="phone" class="form-control" placeholder="+91 91214 XXXXX"
+                      required />
+                  </div>
+
+                  <div class="col-6">
+                    <label for="subject" class="form-label">Subject</label>
+                    <input name="subject" type="text" id="subject" class="form-control"
+                      placeholder="Project, collaboration, or enquiry" required />
+                  </div>
+
+                  <div class="col-12">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea name="message" id="message" class="form-control"
+                      placeholder="Tell me a bit about what you need…" required></textarea>
+                  </div>
+
+                  <div class="col-12 col-md-4">
+                    <button type="submit" class="btn btn-pill-primary">
+                      Send Message
+                      <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                  </div>
+                  <div class="col-12 col-md-8">
+                    <p class="small text-secondary mt-2 mb-0">
+                      Kindly use the form below to contact me regarding suitable openings.
+                    </p>
+                  </div>
+                </div>
+              </form>
+
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+  </main>
 
   <!-- FOOTER -->
   <footer>
@@ -851,13 +884,14 @@
   </footer>
 
 
+  <!-- Structured Data (SEO) -->
   <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "PavanKumar S",
-      "url": "https://pavankumar-s.netlify.app/",
-      "sameAs": [
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Pavan Kumar S",
+  "url": "https://pavankumar-s.netlify.app/",
+  "sameAs": [
     "https://www.linkedin.com/in/pavans143/",
     "https://github.com/PavanGanigera"
   ],
@@ -872,25 +906,29 @@
   "@context": "https://schema.org",
   "@type": "WebSite",
   "url": "https://pavankumar-s.netlify.app/",
-  "name": "Pavan Kumar S",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://pavankumar-s.netlify.app/?s={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
+  "name": "Pavan Kumar S"
 }
 </script>
-  <!-- SCRIPTS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- GSAP + ScrollTrigger + ScrollToPlugin + SplitType -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
-  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js" defer></script>
-  <script src="https://unpkg.com/split-type"></script>
-  <!-- Custome Script -->
-  <script src="script.js" defer></script>
+  <!-- JS (Non-blocking) -->
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+  <script defer src="https://unpkg.com/split-type"></script>
+
+  <script defer src="script.js"></script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-99DFNGDZJ0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-99DFNGDZJ0');
+  </script>
+
 </body>
 
 </html>

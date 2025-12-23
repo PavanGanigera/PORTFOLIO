@@ -176,6 +176,12 @@ body.light-theme .cursor-glow {
     margin-bottom: 0.8rem;
 } */
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 .preloader-logo img {
     width: 80px !important;
     height: auto;
