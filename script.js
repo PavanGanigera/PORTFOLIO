@@ -764,3 +764,9 @@ document.querySelectorAll(".char").forEach(char => {
   
 });
 
+// Google Analytics (CSP SAFE)
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-99DFNGDZJ0");
+
