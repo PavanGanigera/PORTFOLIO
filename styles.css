@@ -618,7 +618,14 @@ body.light-theme .social-icon {
     border-radius: 999px;
     background: rgba(22, 163, 74, 0.16);
     border: 1px solid rgba(22, 163, 74, 0.6);
-    color: #bbf7d0;
+}
+
+body.light-theme .status-pill {
+    color: #00fd59;
+}
+
+body.light-theme span.fw-semibold {
+    color: #000000;
 }
 
 .hero-meta-row {
