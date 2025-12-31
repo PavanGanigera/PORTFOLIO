@@ -36,7 +36,9 @@ body.light-theme {
 
 /* Commoncss */
 .dj {
-    display: flex;justify-content: center;align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Custome CSS */
@@ -177,9 +179,9 @@ body.light-theme .cursor-glow {
 } */
 
 img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 .preloader-logo img {
@@ -1084,9 +1086,7 @@ footer a:hover {
     .scroll-hud {
         right: 1rem;
     }
-}
 
-@media (max-width: 991.98px) {
     .hero-section {
         padding-top: 6.2rem;
     }
@@ -1096,16 +1096,47 @@ footer a:hover {
     }
 }
 
-
 /* Mobile Ressponsive */
 @media (max-width: 767.98px) {
     .cursor-glow {
         display: none;
     }
-}
 
-@media (max-width: 767.98px) {
     .scroll-hud {
         display: none;
+    }
+
+    /* ===============performance css============= */
+    .navbar-custom,
+    .hero-card,
+    .glass-card,
+    .project-card {
+        backdrop-filter: none !important;
+        box-shadow: none !important;
+    }
+
+    .floating-blob,
+    .blob-1,
+    .blob-2 {
+        display: none !important;
+    }
+
+    .animate-wapp {
+        animation: none !important;
+    }
+
+    body,
+    section,
+    .hero-section {
+        background: var(--bg-dark) !important;
+    }
+
+    .cursor-glow {
+        display: none !important;
+        opacity: 0 !important;
+    }
+
+    section {
+    padding: 2.5rem 0;
     }
 }
