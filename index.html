@@ -50,10 +50,16 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
   <!-- Custom CSS -->
+  <link rel="preload" href="styles.css" as="style">
   <link rel="stylesheet" href="styles.css">
-  <!-- <link rel="preload" href="styles.css" as="style" onload="this.rel='stylesheet'">
-  <noscript>
-  </noscript> -->
+
+
+  <script>
+    const prefersReducedMotion =
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.DISABLE_ANIMATIONS =
+      window.innerWidth < 768 || prefersReducedMotion;
+  </script>
 
 </head>
 
@@ -65,12 +71,12 @@
   <div class="cursor-glow"></div>
 
   <!-- PRELOADER -->
-  <div id="preloader" class="dj">
+  <div id="preloader" class="dj" aria-hidden="true">
     <div class="preloader-inner text-center">
       <!-- <div class="preloader-logo">PS</div> -->
       <div class="preloader-logo dj">
-        <img id="preLogo" src="/assets/PAVAN.webp" alt="Pavan Kumar Front End Developer" class="preloader-logo-img"
-          loading="lazy" fetchpriority="high" />
+        <img id="preLogo" src="/assets/PAVAN.webp" loading="eager" fetchpriority="high" width="80" height="80"
+          alt="Pavan Kumar Frontend Developer" />
       </div>
       <div class="preloader-text mt-4">CRAFTING INTERFACES...</div>
       <div class="preloader-bar-track">
