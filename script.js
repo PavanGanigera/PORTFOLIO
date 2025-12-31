@@ -1,6 +1,12 @@
-document.getElementById("year").textContent = new Date().getFullYear();
-gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
+document.getElementById("year").textContent = new Date().getFullYear();
+
+const DISABLE_ANIMATIONS = window.DISABLE_ANIMATIONS === true;
+if (!DISABLE_ANIMATIONS) {
+  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+}
+
+// ========== NAVBAR SCROLL SHADOW ==========
 const navbar = document.querySelector(".navbar-custom");
 window.addEventListener("scroll", () => {
   if (window.scrollY > 40) {
@@ -9,8 +15,8 @@ window.addEventListener("scroll", () => {
     navbar.classList.remove("scrolled");
   }
 });
-
-// ========== SCROLL PROGRESS BAR ==========
+  
+  // ========== SCROLL PROGRESS BAR ==========
 gsap.to("#scroll-progress", {
   width: "100%",
   ease: "none",
@@ -36,7 +42,7 @@ const glow = document.querySelector(".cursor-glow");
 if (glow) {
   const xTo = gsap.quickTo(glow, "x", { duration: 0.18, ease: "power3.out" });
   const yTo = gsap.quickTo(glow, "y", { duration: 0.18, ease: "power3.out" });
-
+  
   window.addEventListener("mousemove", (e) => {
     xTo(e.clientX);
     yTo(e.clientY);
@@ -297,24 +303,24 @@ gsap.to("#experience .timeline-dot", {
 
 // ========== PROJECT CARDS BATCH ANIMATION (rotateZ + scale) ==========
 // ScrollTrigger.batch(".project-card", {
-//   start: "top 80%",
-//   onEnter: (batch) => {
-//     gsap.from(batch, {
-//       y: 60,
-//       opacity: 0,
-//       rotateZ: 6,
-//       scale: 0.9,
-//       duration: 0.8,
-//       ease: "power3.out",
+  //   start: "top 80%",
+  //   onEnter: (batch) => {
+    //     gsap.from(batch, {
+      //       y: 60,
+      //       opacity: 0,
+      //       rotateZ: 6,
+      //       scale: 0.9,
+      //       duration: 0.8,
+      //       ease: "power3.out",
 //       stagger: 0.08
 //     });
 //   },
 //   onLeaveBack: (batch) => {
 //     gsap.to(batch, {
-//       y: 40,
-//       opacity: 0,
-//       rotateZ: -6,
-//       scale: 0.9,
+  //       y: 40,
+  //       opacity: 0,
+  //       rotateZ: -6,
+  //       scale: 0.9,
 //       duration: 0.5,
 //       ease: "power2.in"
 //     });
@@ -438,7 +444,7 @@ function applyTheme(mode) {
       mode === "dark"
         ? '<i class="fa-solid fa-sun"></i>'
         : '<i class="fa-solid fa-moon"></i>';
-  });
+      });
 }
 
 const storedTheme = localStorage.getItem("portfolio-theme") || "dark";
@@ -608,19 +614,19 @@ if (backToTop) {
   // --- CONFIG ---
   const cycleImages = ["assets/PAVAN.png", "assets/logo.png"];
   const cycleIntervalMs = 1000;
-
+  
   // --- STATE ---
   let imgIndex = 0;
   let cycleInterval = null;
-
+  
   // --- FUNCTIONS (defined before use) ---
   function startLogoCycle() {
     const img = document.getElementById("preLogo");
     if (!img) return;
-
+    
     // clear any previous interval (safety)
     if (cycleInterval) clearInterval(cycleInterval);
-
+    
     cycleInterval = setInterval(() => {
       // use GSAP if available for smooth fades, fallback to simple opacity
       if (typeof gsap !== "undefined") {
@@ -661,7 +667,7 @@ if (backToTop) {
   window.addEventListener("load", function () {
     // Start cycling immediately
     startLogoCycle();
-
+    
     // safety: get preloader elements
     const preLogoImg = document.getElementById("preLogo");
     const preloaderBar = document.querySelector(".preloader-bar");
@@ -677,14 +683,14 @@ if (backToTop) {
           if (typeof playHeroAnimations === "function") playHeroAnimations();
         }
       });
-
+      
       tlPre
-        .from(preLogoImg, {
-          opacity: 0,
-          scale: 0.4,
-          duration: 0.5,
-          ease: "back.out(1.7)"
-        })
+      .from(preLogoImg, {
+        opacity: 0,
+        scale: 0.4,
+        duration: 0.5,
+        ease: "back.out(1.7)"
+      })
         .from(
           preloaderText,
           {
@@ -711,24 +717,24 @@ if (backToTop) {
           delay: 0.1
         })
         .set(preloader, { display: "none" });
-    } else {
-      // fallback: stop cycle and hide preloader after short delay
-      setTimeout(() => {
-        stopLogoCycle();
-        if (preloader) preloader.style.display = "none";
-        if (typeof playHeroAnimations === "function") playHeroAnimations();
-      }, 1400);
-    }
+      } else {
+        // fallback: stop cycle and hide preloader after short delay
+        setTimeout(() => {
+          stopLogoCycle();
+          if (preloader) preloader.style.display = "none";
+          if (typeof playHeroAnimations === "function") playHeroAnimations();
+        }, 1400);
+      }
   });
 })();
 
-
+// ========= GOOGLE ANALYTICS EVENT FOR RESUME DOWNLOAD ==========
 
 // /assets/js/main.js
 document.addEventListener("DOMContentLoaded", function () {
   const btn = document.getElementById("resumeBtn");
   if (!btn) return;
-
+  
   btn.addEventListener("click", function () {
     try {
       if (typeof gtag === "function") {
@@ -751,6 +757,12 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Google Analytics (CSP SAFE)
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-99DFNGDZJ0");
+// ========== SPLITTYPE CHAR STYLE OBSERVER (for performance mode) ==========
 document.querySelectorAll(".char").forEach(char => {
   const observer = new MutationObserver(() => {
     char.style.transform = "none";
@@ -764,9 +776,4 @@ document.querySelectorAll(".char").forEach(char => {
   
 });
 
-// Google Analytics (CSP SAFE)
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag("js", new Date());
-gtag("config", "G-99DFNGDZJ0");
 
