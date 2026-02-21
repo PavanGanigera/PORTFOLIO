@@ -732,29 +732,41 @@ if (backToTop) {
 
 // /assets/js/main.js
 document.addEventListener("DOMContentLoaded", function () {
-  const btn = document.getElementById("resumeBtn");
-  if (!btn) return;
-  
-  btn.addEventListener("click", function () {
+
+  function sendGAEvent(eventName, label) {
     try {
       if (typeof gtag === "function") {
-        gtag("event", "resume_download", {
+        gtag("event", eventName, {
           event_category: "engagement",
-          event_label: "Resume Download Click"
+          event_label: label
         });
       } else {
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
-          event: "resume_download",
+          event: eventName,
           event_category: "engagement",
-          event_label: "Resume Download Click"
+          event_label: label
         });
       }
     } catch (e) {
-      // don't break the site if analytics throws an error
       console.warn("GA event error:", e);
     }
+  }
+
+  // Resume Tracking
+  document.querySelectorAll(".track-resume").forEach(btn => {
+    btn.addEventListener("click", function () {
+      sendGAEvent("resume_download", "Resume Download");
+    });
   });
+
+  // Project Tracking
+  document.querySelectorAll(".track-project").forEach(btn => {
+    btn.addEventListener("click", function () {
+      sendGAEvent("project_visit", btn.href);
+    });
+  });
+
 });
 
 // Google Analytics (CSP SAFE)
